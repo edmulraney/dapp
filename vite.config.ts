@@ -7,6 +7,9 @@ export default defineConfig({
   plugins: [react(), viteSingleFile()],
   base: "./",
   build: {
-    sourcemap: true,
+    minify: false,
+    rollupOptions: {
+      treeshake: false,
+    },
   },
 });
